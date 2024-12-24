@@ -44,8 +44,9 @@ export default function Room() {
   transition={{ duration: 0.6, delay: 0.3 }}
   onSubmit={(e) => e.preventDefault()}
 >
-  <label htmlFor="simple-search" className="sr-only">Search</label>
-  <div className="relative ">
+  <label htmlFor="simple-search" className="sr-only ">Search</label>
+ <div className="flex px-5">
+ <div className="relative ">
     <input
       type="text"
       id="simple-search"
@@ -62,6 +63,7 @@ export default function Room() {
   >
     <IoSearch className="w-4 h-4" />
   </button>
+ </div>
 </motion.form>
 
 

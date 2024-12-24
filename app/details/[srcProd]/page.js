@@ -56,17 +56,17 @@ export default function DetailsPage(props) {
   return (
 <div className="">
 <div className="bg-gray-200  md:flex justify-around items-center">
-      <div className="mb-10 p-5 ">
-        <Image src={`/img/${srcProd}.png`} alt="img" width={400} height={400} className=""/>
+      <div className="mb-10 p-5  ">
+        <Image src={`/img/${srcProd}.png`} alt="img" width={400} height={400} className="sm:w-full"/>
         <h1 className="text-2xl mt-4 font-bold mb-2">{prod.price}</h1>
         <p>{prod.description}</p>
-        <div className="flex gap-x-60 items-center mt-8">
-        <button className=" px-5 py-3 bg-black text-white hover:bg-foreground hover:opacity-70 transition-all duration-200"
+        <div className="flex justify-between items-center mt-8 ">
+        <button className="px-5 py-3 bg-black text-white hover:bg-foreground hover:opacity-70 transition-all duration-200"
          onClick={() => handleAddToCart(prod)}
         >
           ADD TO CART
         </button>
-        <FaRegHeart className="hover:text-foreground" style={{fontSize:"24px"}}/>
+        <FaRegHeart className="hover:text-foreground text-4xl sm:text-4xl md:text-3xl lg:text-4xl " />
         </div>
       </div>
 
