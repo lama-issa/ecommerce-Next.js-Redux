@@ -24,7 +24,7 @@ export default function Room() {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center min-h-screen p-5 bg-gray-200 " id="room">
+    <div className="flex flex-col justify-center items-center min-h-screen  bg-gray-200 " id="room">
       {/* Title Section */}
       <motion.div
         className="text-center pt-10"
@@ -45,12 +45,12 @@ export default function Room() {
   onSubmit={(e) => e.preventDefault()}
 >
   <label htmlFor="simple-search" className="sr-only ">Search</label>
- <div className="flex px-5">
+ <div className="flex px-5 ">
  <div className="relative ">
     <input
       type="text"
       id="simple-search"
-      className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 w-[350px] "  // عرض مرن
+      className="bg-gray-50 w-[300px] border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 md:w-[350px]"  // عرض مرن
       placeholder="Search  description..."
       required
       value={searchQuery}

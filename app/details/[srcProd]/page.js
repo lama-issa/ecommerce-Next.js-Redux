@@ -70,7 +70,7 @@ export default function DetailsPage(props) {
         </div>
       </div>
 
-      <div className="py-5 border-b p-5 bg-slate-200 text-center">
+      <div className="py-5 border-b  bg-slate-200 text-center">
         <h1 className="text-2xl font-bold mb-10">Customer Reviews (100+)</h1>
         <div className="flex gap-10 mb-3  justify-center">
           <div  className="">
