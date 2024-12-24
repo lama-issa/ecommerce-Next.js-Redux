@@ -28,7 +28,7 @@ export default function ChooseUs() {
 
           <div className="grid grid-cols-2 gap-5 mt-24">
             {[
-              { Icon: FaCarSide, title: "Fast & Free Shipping" },
+              { Icon: FaCarSide, title: "Fast & Free" },
               { Icon: FiShoppingBag, title: "Quality Products" },
               { Icon: MdOutlineSupport, title: "24/7 Support" },
               { Icon: IoMdReturnRight, title: "Easy Returns" },

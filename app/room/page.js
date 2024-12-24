@@ -24,7 +24,7 @@ export default function Room() {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center min-h-screen  bg-gray-200" id="room">
+    <div className="flex flex-col justify-center items-center min-h-screen p-5 bg-gray-200 " id="room">
       {/* Title Section */}
       <motion.div
         className="text-center pt-10"

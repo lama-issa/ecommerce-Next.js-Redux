@@ -55,8 +55,8 @@ export default function DetailsPage(props) {
 
   return (
 <div className="">
-<div className="bg-gray-200  md:flex justify-around items-center">
-      <div className="mb-10 p-5  ">
+<div className="bg-gray-200 lg:flex justify-around items-center">
+      <div className="mb-10 p-5">
         <Image src={`/img/${srcProd}.png`} alt="img" width={400} height={400} className="sm:w-full"/>
         <h1 className="text-2xl mt-4 font-bold mb-2">{prod.price}</h1>
         <p>{prod.description}</p>
@@ -66,15 +66,17 @@ export default function DetailsPage(props) {
         >
           ADD TO CART
         </button>
-        <FaRegHeart className="hover:text-foreground text-4xl sm:text-4xl md:text-3xl lg:text-4xl " />
+        <FaRegHeart className="hover:text-foreground text-2xl sm:text-4xl md:text-3xl lg:text-4xl " />
         </div>
       </div>
 
-      <div className="py-5 border-b p-5 bg-slate-200">
+      <div className="py-5 border-b p-5 bg-slate-200 text-center">
         <h1 className="text-2xl font-bold mb-10">Customer Reviews (100+)</h1>
-        <div className="flex gap-10 mb-3">
-          <div>
-            <p className="mb-2">Overall Fit:</p>
+        <div className="flex gap-10 mb-3  justify-center">
+          <div  className="">
+          
+            <p className="mb-10 ">Overall Fit:</p>
+         
           </div>
           <div className="flex">
             <IoStarSharp style={{ color: "#ffd250" }} />
@@ -91,14 +93,14 @@ export default function DetailsPage(props) {
               key={index}
               className="w-full sm:w-1/2 px-2 flex flex-col gap-4"
             >
-              <div className="mb-4">
+              <div className="mb-4 px-10">
                 <div className="flex justify-between ">
                   <p className="mb-2">{review.label}</p>
                   <p className="mb-2">{review.value}%</p>
                 </div>
-                <div className="w-full h-2 bg-gray-200 rounded">
+                <div className="w-full h-2 bg-gray-300 rounded ">
                   <motion.div
-                    className={`h-2 rounded ${review.color} `}
+                    className={`h-2 rounded ${review.color}`}
                     initial={{ width: "0%" }}
                     animate={{ width: `${review.value}%` }}
                     transition={{ duration: 1.5, ease: "easeOut" }}
@@ -112,10 +114,10 @@ export default function DetailsPage(props) {
 
 
     </div>
-   <div className="p-20">
-   <Image src="/img/av.jpg" alt="img" width={70} height={70} className="rounded-full mb-5" />
-   <div className="flex gap-5 items-center">
-   <p>ytre kjhgfds iuytreds jhgfdsyuiopk jhgfdsl</p>
+   <div className="p-10">
+   <Image src="/img/av.jpg" alt="img" width={70} height={70} className="rounded-full mb-5  h-12 w-12 object-cover" />
+   <div className="flex gap-5">
+   <p className="w-96">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
   
    <div className="flex">
             <IoStarSharp style={{ color: "#ffd250" }} />
@@ -127,23 +129,23 @@ export default function DetailsPage(props) {
    </div>
    <hr className="mt-5 mb-5"></hr>
 
-   <Image src="/img/av.jpg" alt="img" width={70} height={70} className="rounded-full mb-5" />
-   <div className="flex gap-5 items-center">
-   <p>ytre kjhgfds iuytreds jhgfdsyuiopk jhgfdsl</p>
+   <Image src="/img/av.jpg" alt="img" width={70} height={70} className="rounded-full mb-5 h-12 w-12 object-cover" />
+   <div className="flex gap-5">
+   <p className="w-96">Lorem ipsum dolor sit amet, consectetur adipiscing elit adipiscing elit.</p>
   
    <div className="flex">
             <IoStarSharp style={{ color: "#ffd250" }} />
             <IoStarSharp style={{ color: "#ffd250" }} />
             <IoStarSharp style={{ color: "#ffd250" }} />
-            <IoStarSharp style={{ color: "#ffd250" }} />
+            <IoStarSharp style={{ color: "gray" }} />
             <IoStarSharp style={{ color: "gray" }} />
           </div>
    </div>
    <hr className="mt-5 mb-5"></hr>
 
-   <Image src="/img/av.jpg" alt="img" width={70} height={70} className="rounded-full mb-5" />
-   <div className="flex gap-5 items-center">
-   <p>ytre kjhgfds iuytreds jhgfdsyuiopk jhgfdsl</p>
+   <Image src="/img/av.jpg" alt="img" width={70} height={70} className="rounded-full mb-5  h-12 w-12 object-cover" />
+   <div className="flex gap-5 ">
+   <p className="w-96">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
   
    <div className="flex">
             <IoStarSharp style={{ color: "#ffd250" }} />
