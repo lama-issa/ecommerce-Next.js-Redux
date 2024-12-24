@@ -11,7 +11,7 @@ import Link from "next/link";
 
 export default function Room() {
   const [searchQuery, setSearchQuery] = useState("");
-  const [activeTab, setActiveTab] = useState("tab1");
+  const [activeTab, setActiveTab] = useState("tab1"); // حفظ التاب النشط
 
 
 
@@ -40,14 +40,14 @@ export default function Room() {
 
       {/* Search Section */}
       <motion.form
-        className="flex items-center max-w-sm mx-auto"
+        className="flex items-center"
         initial={{ opacity: 0, scale: 0.9 }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6, delay: 0.3 }}
         onSubmit={(e) => e.preventDefault()}
       >
-        <label htmlFor="simple-search" className="sr-only">Search</label>
-        <div className="relative w-full">
+        <label htmlFor="simple-search " className="sr-only">Search</label>
+        <div className="relative w-full ">
           <input
             type="text"
             id="simple-search"
