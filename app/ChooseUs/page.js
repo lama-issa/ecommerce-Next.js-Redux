@@ -6,7 +6,8 @@ import { FaCarSide } from "react-icons/fa";
 import { FiShoppingBag } from "react-icons/fi";
 import { MdOutlineSupport } from "react-icons/md";
 import { IoMdReturnRight } from "react-icons/io";
-
+//motion: هو عنصر من مكتبة Framer Motion يعمل كبديل لعنصر HTML العادي (مثل <div>).
+// يتيح إضافة أنيميشن مباشرة باستخدام الخصائص المذكورة تحت.
 
 export default function ChooseUs() {
   return (
@@ -14,10 +15,10 @@ export default function ChooseUs() {
       <div className="lg:flex justify-around">
         <motion.div
           className="lg:w-1/2 mb-20"
-          initial={{ opacity: 0, y: 20 }} 
-          whileInView={{ opacity: 1, y: 0 }}  
-          transition={{ duration: 0.8 }} 
-          viewport={{ once: false }}
+          initial={{ opacity: 0, y: 20 }} //النصوص تبدأ بشفافية (opacity: 0) ومنخفضة (y: 20) opacity: 0 يعني أن العنصر سيكون شفافًا تمامًا في البداية (غير مرئي). // y: 20 يعني أن العنصر سيكون في موضع أفقي محرف بمقدار 20 بكسل للأسفل.
+          whileInView={{ opacity: 1, y: 0 }} //عند الظهور في مجال العرض، تتحرك إلى الأعلى تدريجيًا وتصبح مرئية. opacity: 1 يعني أن العنصر يصبح مرئيًا (بدون شفافية). // y: 0 يعني أن العنصر يعود إلى موقعه الأصلي (الإزاحة تنتهي). 
+          transition={{ duration: 0.8 }} //تحدد مدة الحركة بـ 0.8 ثانية
+          viewport={{ once: false }}//once: true تعني أن الأنيميشن سيتم تشغيله مرة واحدة فقط عند ظهور العنصر لأول مرة في مجال العرض.//  إذا كانت القيمة false، سيتم تشغيل الأنيميشن كلما ظهر العنصر في مجال العرض.          
         >
           <h1 className="text-3xl font-bold mb-3">Why Choose Us</h1>
           <div className="border-b-4 border-foreground mt-2 block mb-10 w-60"></div>
@@ -37,7 +38,9 @@ export default function ChooseUs() {
                 className="icon1"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.2 }} 
+                transition={{ duration: 0.8, delay: index * 0.2 }} //delay: index * 0.2 تضيف تأخيرًا للحركة بناءً على ترتيب العنصر (لإظهار العناصر واحدًا تلو الآخر).
+                // كل أيقونة ونصها يبدأان بشفافية وانزياح إلى الأسفل.
+                // يتم تشغيل الحركة بشكل تدريجي لكل عنصر (باستخدام التأخير delay).
                 viewport={{ once: false }}
               >
                 <item.Icon className="text-2xl mb-2 shadow-xl text-foreground" />
@@ -52,8 +55,8 @@ export default function ChooseUs() {
 
         <motion.div
           className="relative flex justify-center items-center h-screen"
-          initial={{ opacity: 0, scale: 0.5 }} 
-          whileInView={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0, scale: 0.5 }} //الصورة تبدأ صغيرة (scale: 0.5) وشفافة.
+          whileInView={{ opacity: 1, scale: 1 }} //عندما تصبح مرئية، يكبر حجمها تدريجيًا إلى الحجم الطبيعي (scale: 1) وتصبح مرئية تمامًا.
           transition={{ duration: 1.5 }}
           viewport={{ once: false }}
         >

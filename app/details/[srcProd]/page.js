@@ -54,13 +54,13 @@ export default function DetailsPage(props) {
   }
 
   return (
-<div>
-<div className="bg-gray-200 p-20 md:flex justify-around items-center">
-      <div className="mb-10">
-        <Image src={`/img/${srcProd}.png`} alt="img" width={400} height={400} />
+<div className="">
+<div className="bg-gray-200  md:flex justify-around items-center">
+      <div className="mb-10 p-5 ">
+        <Image src={`/img/${srcProd}.png`} alt="img" width={400} height={400} className=""/>
         <h1 className="text-2xl mt-4 font-bold mb-2">{prod.price}</h1>
         <p>{prod.description}</p>
-        <div className="flex justify-between items-center mt-8">
+        <div className="flex gap-x-60 items-center mt-8">
         <button className=" px-5 py-3 bg-black text-white hover:bg-foreground hover:opacity-70 transition-all duration-200"
          onClick={() => handleAddToCart(prod)}
         >
