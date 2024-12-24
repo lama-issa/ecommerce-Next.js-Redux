@@ -19,3 +19,44 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/*start home */
+.background-image {
+  background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.5), 
+      rgba(0, 0, 0, 0.5)
+    ), 
+    url('/img/bb.webp');
+  height:100vh;
+  background-size: cover;
+  background-position:center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/*end home */
+
+
+
+@keyframes moveUpDown {
+  0%, 100% {
+    transform: translateY(0); /* الموقع الابتدائي */
+  }
+  50% {
+    transform: translateY(-10px); /* الحركة إلى الأعلى */
+  }
+}
+
+.bounce-custom {
+  animation: moveUpDown 3s infinite; /* الحركة مستمرة */
+}
+
+
+/* .line{
+  display: block;
+  width: 200px;
+  margin: auto;
+  margin-bottom: 20px;
+border-bottom: 1px solid #cb8670;
+} */
