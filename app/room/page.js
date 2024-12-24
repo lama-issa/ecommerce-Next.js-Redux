@@ -11,16 +11,14 @@ import Link from "next/link";
 
 export default function Room() {
   const [searchQuery, setSearchQuery] = useState("");
-  const [activeTab, setActiveTab] = useState("tab1"); // حفظ التاب النشط
+  const [activeTab, setActiveTab] = useState("tab1"); 
 
 
 
-  // دالة لتصفية الغرف بناءً على النص المدخل
   const filteredRooms = roomsData[activeTab].filter(room =>
     room.description.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
-  // دالة لتغيير التاب النشط
   const handleTabClick = (tabId) => {
     setActiveTab(tabId);
   };
@@ -40,32 +38,32 @@ export default function Room() {
 
       {/* Search Section */}
       <motion.form
-        className="flex items-center"
-        initial={{ opacity: 0, scale: 0.9 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.6, delay: 0.3 }}
-        onSubmit={(e) => e.preventDefault()}
-      >
-        <label htmlFor="simple-search " className="sr-only">Search</label>
-        <div className="relative w-full ">
-          <input
-            type="text"
-            id="simple-search"
-            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5"
-            placeholder="Search branch name..."
-            required
-            style={{ width: "350px" }}
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-          />
-        </div>
-        <button
-          type="submit"
-          className="p-2.5 ms-2 text-sm font-medium text-white bg-foreground rounded-lg"
-        >
-          <IoSearch className="w-4 h-4" />
-        </button>
-      </motion.form>
+  className="flex items-center w-full sm:w-auto"  
+  initial={{ opacity: 0, scale: 0.9 }}
+  whileInView={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 0.6, delay: 0.3 }}
+  onSubmit={(e) => e.preventDefault()}
+>
+  <label htmlFor="simple-search" className="sr-only">Search</label>
+  <div className="relative w-full">
+    <input
+      type="text"
+      id="simple-search"
+      className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 w-full sm:w-[250px] md:w-[350px]"  // عرض مرن
+      placeholder="Search branch name..."
+      required
+      value={searchQuery}
+      onChange={(e) => setSearchQuery(e.target.value)}
+    />
+  </div>
+  <button
+    type="submit"
+    className="p-2.5 ms-2 text-sm font-medium text-white bg-foreground rounded-lg"
+  >
+    <IoSearch className="w-4 h-4" />
+  </button>
+</motion.form>
+
 
       {/* Tabs Section */}
       <div className="tabs mt-5">
